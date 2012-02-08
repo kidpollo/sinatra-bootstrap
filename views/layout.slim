@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    link href='assets/application.css' media='screen' rel='stylesheet' type='text/css'
+    title Title tag
+    == yield_content :style
+  body
+    div class="navbar navbar-fixed-top"
+      div class="navbar-inner"
+        div class="container"
+          a class='brand' href='/'
+            | App Title
+          ul class='nav'
+            li
+              a href='/' Home
+    
+    div class="container"
+      
+      == yield
+      
+      footer class="footer"
+        p © something someyear
+    
+    script type="text/javascript" src="assets/application.js"
+    == yield_content :javascript
+
